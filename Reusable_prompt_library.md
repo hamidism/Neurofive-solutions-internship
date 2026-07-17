@@ -1,35 +1,52 @@
-<p align="center">
-  <img src="./banner.png" width="160" height="160" style="border-radius:50%; object-fit:cover;" alt="NeuroFive Solutions"/>
-</p>
+<div align="center">
+  <img src="./banner.png" width="140" height="140" style="border-radius:50%; object-fit:cover;" alt="NeuroFive Solutions"/>
 
-# NeuroFive Internship — Task 2
-### Build Your First Reusable Prompt Library
+  # 🧠 Prompt Library v1
+  ### Reusable Prompt Templates for Customer Support Replies
 
-![Task](https://img.shields.io/badge/Task-Prompt%20Library-1b4d34?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-2e7d32?style=for-the-badge)
-![UseCase](https://img.shields.io/badge/Use%20Case-Customer%20Support%20Replies-123825?style=for-the-badge)
+  ![Task](https://img.shields.io/badge/Task-Prompt%20Library-1b4d34?style=flat-square)
+  ![Status](https://img.shields.io/badge/Status-Completed-2e7d32?style=flat-square)
+  ![Use%20Case](https://img.shields.io/badge/Use%20Case-Customer%20Support-123825?style=flat-square)
+  ![Tool](https://img.shields.io/badge/Built%20With-Claude-6b4fbb?style=flat-square)
 
-**Submitted by:** Chashman Aslam · Multan University of Science and Technology (MUST)
+  **NeuroFive Internship — Task 2**
+  Submitted by **Hamid Rafaqat** · COMSATS University Islamabad, Attock City
+
+</div>
+
+<br>
+
+## 📖 Table of Contents
+
+- [Overview](#-overview)
+- [Use Case](#-use-case)
+- [The Template](#-the-template)
+- [Prompt Library](#-prompt-library)
+- [Summary Table](#-summary-table)
+- [Why This Matters](#-why-this-matters)
+- [Deliverables](#-deliverables)
 
 ---
 
-## 📌 Overview
+## 🔍 Overview
 
 Professional prompt engineers don't rewrite prompts from scratch every time — they build **reusable templates** with placeholders, the same way developers write functions instead of copy-pasting code.
 
-This task documents **Prompt Library v1**: a single reusable prompt template for **Customer Support Replies**, instantiated into 5 real, distinct scenarios, tested live, with actual outputs captured below.
+This repo documents **Prompt Library v1**: one reusable prompt template for **Customer Support Replies**, instantiated into 5 real, distinct scenarios, tested live, with real outputs captured below.
+
+> 💡 The goal isn't saving typing — it's saving *judgment calls* by encoding them once into a structure anyone on a team can reuse.
 
 ---
 
-## 🎯 Use Case Chosen
+## 🎯 Use Case
 
-**Customer Support Email Replies** — chosen because it's a high-frequency, high-stakes writing task where consistency, tone control, and speed all matter. A well-built template here saves real time in a real job, not just in a classroom exercise.
+**Customer Support Email Replies** — a high-frequency, high-stakes writing task where consistency, tone control, and speed all matter. A well-built template here saves real time in a real job, not just a classroom exercise.
 
 ---
 
-## 🧩 The Reusable Template
+## 🧩 The Template
 
-Every prompt in this library follows the exact same 5-part skeleton. Only the bracketed variables change between uses — the structure itself never does.
+Every prompt in this library follows the same 5-part skeleton. Only the bracketed variables change between uses — the structure itself never does.
 
 ```text
 ROLE: You are a [job title] at [company/product].
@@ -47,24 +64,30 @@ CONSTRAINTS: [Tone rules, what must be included, what must be avoided,
 policy limits — e.g., don't promise exact dates, don't sound scripted]
 ```
 
-**Why this structure works:**
-- **Role** anchors the voice and level of authority in the reply
-- **Context** feeds in the specific situation so the reply isn't generic
-- **Task** removes ambiguity about what output is actually expected
-- **Format** controls length and structure so replies are consistent and easy to send as-is
-- **Constraints** enforces tone and policy boundaries — the guardrails that keep AI output safe to send without heavy editing
+<details>
+<summary><strong>Why this structure works</strong> (click to expand)</summary>
+<br>
+
+| Part | Purpose |
+|---|---|
+| **Role** | Anchors the voice and level of authority in the reply |
+| **Context** | Feeds in the specific situation so the reply isn't generic |
+| **Task** | Removes ambiguity about what output is actually expected |
+| **Format** | Controls length and structure so replies are consistent and easy to send as-is |
+| **Constraints** | Enforces tone and policy boundaries — the guardrails that keep AI output safe to send without heavy editing |
+
+</details>
 
 ---
 
-## 📚 Prompt Library v1 — 5 Instantiations
+## 📚 Prompt Library
 
-Each of the 5 prompts below uses the **exact same template**, with only the Role/Context/Task/Format/Constraints variables swapped for a different real-world scenario. All 5 were run live and the actual outputs are included, unedited.
+Each entry below uses the **exact same template**, with only Role/Context/Task/Format/Constraints swapped for a different real-world scenario. All 5 were run live and outputs are included unedited.
 
----
+<details open>
+<summary><strong>1️⃣ Late Delivery — Apology + Goodwill Gesture</strong></summary>
 
-### 1️⃣ Late Delivery — Apology + Goodwill Gesture
-
-**Prompt:**
+**Prompt**
 ```text
 ROLE: You are a customer support specialist at ShopEase, an online
 retail company.
@@ -84,7 +107,7 @@ time unless verified. Offer a discount code or expedited shipping as
 a goodwill gesture. No corporate jargon.
 ```
 
-**Output:**
+**Output**
 > **Subject: Following Up on Your Order — We're On It**
 >
 > Hi Sarah,
@@ -99,11 +122,12 @@ a goodwill gesture. No corporate jargon.
 > Alex
 > ShopEase Customer Support
 
----
+</details>
 
-### 2️⃣ Billing Error — Duplicate Charge
+<details>
+<summary><strong>2️⃣ Billing Error — Duplicate Charge</strong></summary>
 
-**Prompt:**
+**Prompt**
 ```text
 ROLE: You are a billing support agent at FinTrack, a subscription-based
 expense tracking app.
@@ -123,7 +147,7 @@ timeline (3-5 business days). Avoid blaming the customer or sounding
 overly technical.
 ```
 
-**Output:**
+**Output**
 > **Subject: Your Duplicate Charge — Refund Confirmed**
 >
 > Hi Ahmed,
@@ -141,11 +165,12 @@ overly technical.
 > Layla
 > FinTrack Billing Support
 
----
+</details>
 
-### 3️⃣ Product Defect — Replacement or Refund
+<details>
+<summary><strong>3️⃣ Product Defect — Replacement or Refund</strong></summary>
 
-**Prompt:**
+**Prompt**
 ```text
 ROLE: You are a customer care representative at HomeGlow, a home
 appliances brand.
@@ -165,7 +190,7 @@ loyalty as a repeat customer. Include return instructions clearly.
 Do not sound scripted.
 ```
 
-**Output:**
+**Output**
 > **Subject: Let's Fix This For You, Maria**
 >
 > Hi Maria,
@@ -187,11 +212,12 @@ Do not sound scripted.
 > Omar
 > HomeGlow Customer Care
 
----
+</details>
 
-### 4️⃣ General How-To Question
+<details>
+<summary><strong>4️⃣ General How-To Question</strong></summary>
 
-**Prompt:**
+**Prompt**
 ```text
 ROLE: You are a friendly support agent at CloudNote, a note-taking app.
 
@@ -208,7 +234,7 @@ CONSTRAINTS: Friendly, concise tone. No unnecessary preamble. Assume
 the user is not very technical.
 ```
 
-**Output:**
+**Output**
 > **Subject: Dark Mode + Syncing — Here's How!**
 >
 > Hi Jason,
@@ -231,11 +257,12 @@ the user is not very technical.
 > Sam
 > CloudNote Support
 
----
+</details>
 
-### 5️⃣ Positive Review — Thank You + Soft Referral
+<details>
+<summary><strong>5️⃣ Positive Review — Thank You + Soft Referral</strong></summary>
 
-**Prompt:**
+**Prompt**
 ```text
 ROLE: You are a customer engagement specialist at Brewly, a specialty
 coffee subscription service.
@@ -254,15 +281,17 @@ CONSTRAINTS: Genuine, not salesy. Mention the referral program only
 briefly, not pushy. Use her name.
 ```
 
-**Output:**
+**Output**
 > Hi Priya, thank you so much for this — it genuinely made our day! We're so glad the flavor variety hit the mark, and getting it to you quickly is exactly what we aim for. Recommending us to friends means the world to us, truly. If they ever sign up, don't forget you've got a referral code waiting to earn you both a little something extra. Thanks again for being part of the Brewly community! ☕
+
+</details>
 
 ---
 
-## 📊 Library Summary
+## 📊 Summary Table
 
 | # | Scenario | Tone | Length Target | Special Requirement |
-|---|---|---|---|---|
+|:-:|---|---|:-:|---|
 | 1 | Late delivery | Empathetic, urgent | 100–150 words | Goodwill gesture required |
 | 2 | Billing error | Reassuring, calm | 100–130 words | Bullet list + refund timeline |
 | 3 | Product defect | Empathetic, efficient | 120–150 words | Two clear options + numbered steps |
@@ -273,7 +302,7 @@ briefly, not pushy. Use her name.
 
 ## 💡 Why This Matters
 
-Rewriting a support reply prompt from scratch every time costs time and produces inconsistent tone across a team. This template turns that into a **fill-in-the-blank operation**: swap five variables, get a polished, on-brand reply in seconds — whether the situation is a shipping delay, a billing glitch, or a five-star review. That's the actual promise of "reusable prompts": not saving typing, but **saving judgment calls** by encoding them once into a structure everyone can reuse.
+Rewriting a support reply prompt from scratch every time costs time and produces inconsistent tone across a team. This template turns that into a **fill-in-the-blank operation**: swap five variables, get a polished, on-brand reply in seconds — whether the situation is a shipping delay, a billing glitch, or a five-star review.
 
 ---
 
@@ -283,14 +312,14 @@ Rewriting a support reply prompt from scratch every time costs time and produces
 |---|---|
 | `README.md` | This file — full prompt library write-up |
 | `Prompt_Library_v1.pdf` | Polished PDF version of this library |
-| Video (LinkedIn) | 2–3 min walkthrough of the template + live demo of 2 of the 5 prompts  |
+| Video (LinkedIn) | 2–3 min walkthrough of the template + live demo of 2 of the 5 prompts |
 
 ---
 
-## 🛠️ Tool Used
+<div align="center">
 
-- **Claude** (Anthropic) — all 5 prompts tested live, outputs captured unedited
-
----
+**🛠️ Tool Used:** Claude (Anthropic) — all 5 prompts tested live, outputs captured unedited
 
 <sub>NeuroFive Solutions — Internship Program</sub>
+
+</div>
